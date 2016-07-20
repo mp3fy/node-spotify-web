@@ -51,6 +51,14 @@ Spotify.login(username, password, function (err, spotify) {
 
   });
 });
+
+// Facebook auth credentials...
+var fbuid = process.env.USERNAME; //User ID not Username; eg, 100001806654172
+var access_token = process.env.PASSWORD; //OAuth Access Token 
+
+Spotify.facebookLogin(fbuid, access_token, function (err, spotify) {
+...
+});
 ```
 
 See the `example` directory for some more example code.
